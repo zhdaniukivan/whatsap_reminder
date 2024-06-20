@@ -16,11 +16,15 @@ Reminder WhatsApp Bot — это бот для установки и получ�
 Install
 
 git clone https://github.com/zhdaniukivan/whatsap_reminder.git
-
-pip install --upgrade pip
-pip install -r requirements.txt
+переходим в каталог с програмой Whatsapp_reminder:
+cd path_to_your_project/Whatsapp_reminder
+активируем, если нужно, или создаем новое виртуальное окружение:
+source .venv/bin/activate
 в файле .env_exemple удаляете из названия часть _exemple
 и прописываете свои данные для twilio.
+pip install --upgrade pip
+pip install -r requirements.txt
+
 
 Заускаем три окна терминала. Первый для django сервер:
 cd path_to_your_project/Whatsapp_reminder
