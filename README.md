@@ -17,23 +17,25 @@ Install
 
 git clone https://github.com/zhdaniukivan/whatsap_reminder.git
 
-pip install --upgrade pip pip install -r requirements.txt в файле .env_exemple удаляете из названия часть _exemple
-и прописываете свои данны для twilio
+pip install --upgrade pip
+pip install -r requirements.txt
+в файле .env_exemple удаляете из названия часть _exemple
+и прописываете свои данные для twilio.
 
 Заускаем три окна терминала. Первый для django сервер:
-cd path_to_your_project/reminders
+cd path_to_your_project/Whatsapp_reminder
 source .venv/bin/activate
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 
 второй терминал для celery worker
-cd path_to_your_project/reminders
+cd path_to_your_project/Whatsapp_reminder
 source .venv/bin/activate
 celery -A reminder_whatsapp_bot worker --loglevel=info
 
 третий для celery worker
-cd path_to_your_project/reminders
+cd path_to_your_project/Whatsapp_reminder
 source .venv/bin/activate
 celery -A reminder_whatsapp_bot beat --loglevel=info
 
